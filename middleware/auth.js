@@ -16,7 +16,6 @@ function auth(req,res,next){
             return next(errUnAuthorized)
         }
         next()
-
     }
     catch(e){
         // dont expose error to the user 

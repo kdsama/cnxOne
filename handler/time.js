@@ -3,7 +3,7 @@
 class timeHandler {
     constructor(ts){
         this.ts = ts
-        this.get = this.get.bind(this)
+        
     }
     // validate the time request
     async get(req,res){

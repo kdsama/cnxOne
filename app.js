@@ -7,21 +7,22 @@ const promMid = require('express-prometheus-middleware');
 
 
 var timeRouter = require('./routes/time');
+const { auth } = require('./middleware/auth');
 
 var app = express();
-
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static(path.join(__dirname, 'public')));
-// copied from npmjs documentation of prometheus
+// For auth check for all the apis 
+// aleternatively we can do it selectively
+// Example for that is in routes/time.js
+app.use(auth)
+
 
 app.use(promMid({
+  
   metricsPath: '/metrics',
   collectDefaultMetrics: true,
   requestDurationBuckets: [0.1, 0.5, 1, 1.5],
