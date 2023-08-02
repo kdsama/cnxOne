@@ -1,0 +1,13 @@
+{
+  "name": "cnxone",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "express-prometheus-middleware": "^1.2.0",
+    "http-errors": "~1.6.3"
+  }
+}
