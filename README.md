@@ -64,3 +64,8 @@ I have shared screenshots for the base cases. These cases are
 1. A Logger with different level of message logging, according to the environment (dev,test,prod)
 2. Unit/ Integration tests 
 3. Code coverage tools + Linter 
+
+
+
+## other information 
+Haven't worked on React. Have worked on Vue2.0 for a couple of years before transitioning into a team lead role (more backend + infrastructure focused)
